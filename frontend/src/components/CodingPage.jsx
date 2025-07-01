@@ -46,7 +46,7 @@ function useSocket(replId) {
     useEffect(() => {
         const newSocket = io(`${EXECUTION_ENGINE_URI}?roomId=${replId}`);
         setSocket(newSocket);
-
+        console.log(newSocket)
         return () => {
             newSocket.disconnect();
         };
